@@ -8,7 +8,3 @@ class ConverterError(Exception):
     def from_exc(cls, exc: Exception) -> typing.Self:
         cls.__cause__ = exc
         return cls()
-
-
-class GenericError(ConverterError):
-    pass

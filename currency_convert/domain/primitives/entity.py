@@ -1,6 +1,12 @@
 import dataclasses
 import uuid
 
+from currency_convert.domain.primitives.error import ConverterError
+
+
+class EntityError(ConverterError):
+    """Base class for errors related to Entities."""
+
 
 @dataclasses.dataclass(slots=True)
 class Entity:
